@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>New Quote</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card w-50">
+                <div class="text-center">
+                    <h1 class="card-title">Add a punny quote</h1>
+                </div>
+                <div class="card-body">
+                    <form action="/add" method="post">
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="name" placeholder="Your name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="quote">Your quote:</label>
+                            <textarea name="quote" rows="4" class="form-control" placeholder="Place dad jokes here"></textarea>
+                        </div>
+                        <ul>
+                            <% if(messages.name) { %>
+                                <% for (var x of messages.name) { %>
+                                    <li class="red">
+                                        <%= x %>
+                                    </li>
+                                    <% } %>
+                                        <% } %>
+                        </ul>
+                        <div class="row justify-content-center">
+                            <input type="submit" class="btn btn-outline-dark" value="+Quote">
+                            <div class="margin"></div>
+                            <a href="/quotes" class="btn btn-outline-light">Quotes</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

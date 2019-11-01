@@ -1,0 +1,33 @@
+body {
+    background-image: url('/img/book.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 80;
+}
+
+.container {
+    padding-top: 120px;
+}
+
+.card {
+    padding: 20px;
+    background-color: #c2c9cb94;
+}
+
+.list-group-item {
+    background-color: #c2c9cb2d;
+}
+
+.margin {
+    margin: 0 20px;
+}
+
+.red {
+    color: red;
+}
